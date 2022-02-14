@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Portal</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-icons.css">
+    <title>The beginning</title>
 </head>
-<body>
-    <a href="Catabolt">Here be catabolt</a>
+
+<body class="bg-dark text-white-50">
+    <div class="container text-center d-flex flex-column align-middle justify-content-center">
+        <div class="row">
+            <h1 class="pt-sm-5 mt-sm-5">Are you ready to go on an adventure?</h1>
+            <hr>
+        </div>
+        <div class="row justify-content-end">
+            <div class="col-sm-4">
+                <div class="d-block d-sm-none">
+                    <hr>
+                </div>
+                <h4>Deepest Depths of The Earth</h4>
+                <video autoplay loop muted class="w-100 h-50">
+                    <source src="images\beach.mp4">
+                </video>
+                <div class="container">
+                    <p>The Ocean is a wonderful place. There are many beautiful things to see, we know that
+                        you will love it. Especially the intriguing creatures that live in underwater caves where the
+                        sun
+                        doesn't touch.</p>
+                </div>
+                <button class="btn btn-outline-success justify-content-center w-100" type="button"
+                    onclick="document.location='Beach'">
+                    <i class="bi bi-sun"></i> The Beach
+                </button>
+                <hr>
+            </div>
+            <div class="col-sm-4">
+                <div class="d-block d-sm-none">
+                    <hr>
+                </div>
+                <h4>Uncharted Territory of The Universe</h4>
+                <video autoplay muted loop class="w-100 h-50">
+                    <source src="images\ocean.mp4">
+                </video>
+                <div class="container">
+                    <p>Will you wander astray? Move unwittingly into the timeless horizon of a black hole? God only
+                        knows what mysteries are to be discovered here.</p>
+                </div>
+                <button class="btn btn-outline-danger w-100" type="button" onclick="document.location='Space'">
+                    <i class="bi bi-stars"></i> Space
+                </button>
+                <hr>
+            </div>
+            <div class="col-sm-4">
+                <div class="d-block d-sm-none">
+                    <hr>
+                </div>
+
+                <h4>Isolated Frozen Wasteland</h4>
+                <video autoplay loop class="w-100 h-50">
+                    <source src="images\tundra.mp4">
+                </video>
+                <div class="container ">
+                    <p>Venture into a land coated in ice and snow. The air itself will kill you here, and its completely
+                        silent except for the howls of the indigenous packs of wolves and the roars of the aggressive
+                        polar bears. Best ice fishing on the planet.</p>
+                </div>
+                <button class="btn btn-outline-primary w-100" type="button" onclick="document.location='Tundra'">
+                    <i class="bi bi-snow2"></i> Tundra
+                </button>
+                <hr>
+            </div>
+        </div>
 </body>
+
 </html>
