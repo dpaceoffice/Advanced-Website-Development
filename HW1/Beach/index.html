@@ -3,18 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="../styles/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-icons.css">
     <title>Beach</title>
   </head>
   <body class="bg-dark position-absolute top-50 start-50 translate-middle">
     <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
-    <script src="Build/Beach.loader.js"></script>
+    <div class="d-flex justify-content-center">
+      <a class="mt-2 btn btn-primary btn-sm btn-block mx-auto" href="index.html">Go Back to Portal</a>
+    </div>
+    <script src="Beach/Build/Beach.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
-        dataUrl: "Build/Beach.data",
-        frameworkUrl: "Build/Beach.framework.js",
-        codeUrl: "Build/Beach.wasm",
+        dataUrl: "Beach/Build/Beach.data",
+        frameworkUrl: "Beach/Build/Beach.framework.js",
+        codeUrl: "Beach/Build/Beach.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Beach",

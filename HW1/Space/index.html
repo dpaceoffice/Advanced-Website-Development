@@ -1,37 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/bootstrap.min.css">
-    <link rel="stylesheet" href="../styles/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-icons.css">
     <title>Space Adventure</title>
 </head>
-
 <body class="bg-dark text-white position-absolute top-50 start-50 translate-middle">
-    <div class="form-group">
+    <form name="phrase" action="Space/game.php" class="form-group" method="post" onsubmit="checkSecret()">
         <label for="">Enter the hidden phrase to enter this adventure.</label>
         <input type="text" class="form-control" id="secret" placeholder="Avada Kadabra">
+        <input type="hidden" name="request" value="">
         <hr>
-        <button type="button" value="Submit" onclick="checkSecret()" id="submitid" class="btn btn-primary btn-md btn-block">Submit</button>
-    </div>
+        <button type="button" value="Submit" onclick="checkSecret()" id="submitid"
+            class="btn btn-primary btn-md btn-block">Submit</button>
+    </form>
 </body>
 <script>
     function checkSecret() {
-        if(secret.value == 'spaceballs') {
-            document.location = "game.html"
-        } else {
-            document.body.innerHTML = (
-                `
-                <h1 class="text-center">Thats Incorrect.</h1>
-                <hr>
-                <h2>You must adventure more to figure out the secret phrase.</h2>
-                `
-            );
-        }       
+        document.phrase.request.value = secret.value;
+        secret.value = "";
+        document.phrase.submit();
     }
 </script>
-
 </html>
