@@ -21,7 +21,6 @@ function createUnityInstance(canvas, config, onProgress) {
     errorHandler(message, filename, lineno);
   }
 
-  
   var Module = {
     canvas: canvas,
     webglContextAttributes: {
