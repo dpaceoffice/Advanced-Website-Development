@@ -1,7 +1,9 @@
 <?php
-
-$phrase = htmlspecialchars($_POST['request']);
-
+if($_SERVER['REQUEST_METHOD'] === 'POST')
+  $phrase = htmlspecialchars($_POST['request']);
+else 
+  $phrase = "None";
+  
 if ($phrase == "SpaceBalls") {
   echo "<!DOCTYPE html>
     <html lang=\"en-us\">
