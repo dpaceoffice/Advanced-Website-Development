@@ -1,19 +1,3 @@
-function checkSecret() {
-  if(secret.value == 'open') {
-      document.body.innerHTML = (
-        `
-        <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
-        `
-      );
-  } else {
-      document.body.innerHTML = (
-          `
-          <h1>You Die</h1>
-          `
-      );
-  }       
-}
-
 function createUnityInstance(canvas, config, onProgress) {
   onProgress = onProgress || function () {};
 
@@ -37,6 +21,7 @@ function createUnityInstance(canvas, config, onProgress) {
     errorHandler(message, filename, lineno);
   }
 
+  
   var Module = {
     canvas: canvas,
     webglContextAttributes: {
