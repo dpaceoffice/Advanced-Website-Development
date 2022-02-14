@@ -10,20 +10,20 @@ if ($phrase == "FrozenWonder") {
         <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
         <link rel=\"stylesheet\" href=\"../styles/bootstrap.min.css\">
         <link rel=\"stylesheet\" href=\"../styles/bootstrap-icons.css\">
-        <link rel=\"icon\" href=\"images/favicon.png\" />
-        <title>Space</title>
+        <link rel=\"icon\" href=\"../images/favicon.png\" />
+        <title>Tundra</title>
       </head>
       <body class=\"bg-dark position-absolute top-50 start-50 translate-middle\">
         <canvas id=\"unity-canvas\" width=960 height=600 style=\"width: 960px; height: 600px; background: #231F20\"></canvas>
         <div class=\"d-flex justify-content-center\">
           <a class=\"mt-2 btn btn-primary btn-sm btn-block mx-auto\" href=\"../index.html\">Go Back to Portal</a>
         </div>
-        <script src=\"Build/Space.loader.js\"></script>
+        <script src=\"Build/Tundra.loader.js\"></script>
         <script>
           createUnityInstance(document.querySelector(\"#unity-canvas\"), {
-            dataUrl: \"Build/Space.data\",
-            frameworkUrl: \"Build/Space.framework.js\",
-            codeUrl: \"Build/Space.wasm\",
+            dataUrl: \"Build/Tundra.data\",
+            frameworkUrl: \"Build/Tundra.framework.js\",
+            codeUrl: \"Build/Tundra.wasm\",
             streamingAssetsUrl: \"StreamingAssets\",
             companyName: \"DefaultCompany\",
             productName: \"CanabaltParalax\",
@@ -45,7 +45,7 @@ if ($phrase == "FrozenWonder") {
       <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
       <link rel=\"stylesheet\" href=\"../styles/bootstrap.min.css\">
       <link rel=\"stylesheet\" href=\"../styles/bootstrap-icons.css\">
-      <link rel=\"icon\" href=\"images/favicon.png\" />
+      <link rel=\"icon\" href=\"../images/favicon.png\" />
       <title>Space Adventure</title>
   </head>
   

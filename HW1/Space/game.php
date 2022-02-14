@@ -10,7 +10,7 @@ if ($phrase == "SpaceBalls") {
         <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">
         <link rel=\"stylesheet\" href=\"../styles/bootstrap.min.css\">
         <link rel=\"stylesheet\" href=\"../styles/bootstrap-icons.css\">
-        <link rel=\"icon\" href=\"images/favicon.png\" />
+        <link rel=\"icon\" href=\"../images/favicon.png\" />
         <title>Space</title>
       </head>
       <body class=\"bg-dark position-absolute top-50 start-50 translate-middle\">
@@ -45,7 +45,7 @@ if ($phrase == "SpaceBalls") {
       <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
       <link rel=\"stylesheet\" href=\"../styles/bootstrap.min.css\">
       <link rel=\"stylesheet\" href=\"../styles/bootstrap-icons.css\">
-      <link rel=\"icon\" href=\"images/favicon.png\" />
+      <link rel=\"icon\" href=\"../images/favicon.png\" />
       <title>Space Adventure</title>
   </head>
   
