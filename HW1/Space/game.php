@@ -16,7 +16,7 @@ if ($phrase == "SpaceBalls") {
         <title>Space</title>
       </head>
       <body class=\"bg-dark position-absolute top-50 start-50 translate-middle\">
-        <canvas id=\"unity-canvas\" width=960 height=600 style=\"width: 960px; height: 600px; background: #231F20\"></canvas>
+        <canvas id=\"unity-canvas\" width=960 height=650 style=\"width: 960px; height: 600px; background: #231F20\"></canvas>
         <div class=\"d-flex justify-content-center\">
           <a class=\"mt-2 btn btn-primary btn-sm btn-block mx-auto\" href=\"../index.html\">Go Back to Portal</a>
         </div>
