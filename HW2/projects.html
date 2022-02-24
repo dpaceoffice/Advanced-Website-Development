@@ -13,7 +13,92 @@
 </head>
 
 <body class="bg-dark text-light">
-    <iframe src='navbar.html' class="w-100" style="height: 150px;"></iframe>
+    <!--Header-->
+    <iframe src='navbar.html' class="w-100" style="height: 60px;"></iframe>
+    <!--Page Content-->
+    <!--Coding Projects Portfolio-->
+    <div class="container-fluid">
+        <h1 class="display-1 mt-4">
+            <i class="bi bi-code-slash"></i> Projects
+        </h1>
+        <hr>
+
+        <!-- START: Card Group -->
+        <div class="row gap-2 text-dark">
+            <!-- START: Card 1 -->
+            <div class="col-xl">
+                <div class="card bg-light text-center">
+                    <!-- Card Header -->
+                    <div class="card-header">
+                        <img class="img-thumbnail" style="height:350px" src="images/app.jpg">
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            Mobile Object Detection AI </h4>
+                        <p class="card-text">
+                            This is a mobile app that currently implements tensorflow's coco-ssd object detection model using tensorflow in the react native expo environment. It processes live camera data from the device's camera and draws predictions onto the screen via an overlaying
+                            canvas.
+                        </p>
+                    </div>
+                    <!-- Card Footer -->
+                    <div class="card-footer text-muted">
+                        <small class="text-muted">HTML, CSS, JavaScript, React Native</small>
+                        <button class="btn btn-primary btn-block float-end">See More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- END:Card 1 -->
+            <!-- START:Card 2 -->
+            <div class="col-xl">
+                <div class="card bg-light text-center">
+                    <!-- Card Header -->
+                    <div class="card-header">
+                        <img class="img-thumbnail" src="images/chatbox.png" style="height:350px;">
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <h4 class="card-title"> TeH BoX </h4>
+                        <p class="card-text">
+                            This project is a multi-threaded, desktop, chatbox application. The server backend, programmed with Java, utilizes sqLite to create/store registered accounts and encrypts passwords with the blowfish cypher. The client’s frontend GUI was created by using
+                            Java's Swing API. Clients communicate synchronously with the server using a TCP protocol.
+                        </p>
+                    </div>
+                    <!-- Card Footer -->
+                    <div class="card-footer">
+                        <small class="text-muted">Java</small>
+                        <button class="btn btn-primary btn-block float-end">See More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- END:Card 2 -->
+            <!-- START:Card 3 -->
+            <div class="col-xl">
+                <div class="card bg-light text-center">
+                    <!-- Card Header -->
+                    <div class="card-header">
+                        <img class="img-thumbnail" src="images/dbms.jpg" style="height:350px;" class="mw-50">
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body" class="mh-50">
+                        <h4 class="card-title"> Careerpath Finder/Enabler - Relational Databases </h4>
+                        <p class="card-text">
+                            This is a group project aimed at designing the relational databases to be used in a career path finder/enabler application. My team and I built relations modeling real life data collected from Linkedin, GICs, Indeed and others. The goal of this project
+                            was to demonstrate a working understanding of Oracle's Database Management System, formulate several queries using SQL/PLSQL, and normalize/structure relational database schemes.
+                        </p>
+                    </div>
+                    <!-- Card Footer -->
+                    <div class="card-footer">
+                        <small class="text-muted">PL/SQL, Relational DBMS </small>
+                        <button class="btn btn-primary btn-block float-end">See More</button>
+                    </div>
+                </div>
+            </div>
+            <!-- END:Card 3 -->
+        </div>
+        <!-- END:Card Group -->
+    </div>
+    <!--Footer-->
     <iframe src='footer.html' class="w-100 h-100" scrolling="no"></iframe>
     <!-- Bootstrap Bundle with Popper -->
     <script src="scripts/bootstrap.bundle.min.js"></script>

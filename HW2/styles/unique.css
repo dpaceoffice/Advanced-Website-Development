@@ -1,3 +1,37 @@
 .navbar-expand-sm .navbar-collapse {
     justify-content: space-around;
 }
+
+
+/* This media query works for medium screen devices (All devices with resolution from 992px to 1199px), for example Computers */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .card-body {
+        height: 500px;
+    }
+}
+
+
+/* This media query works for small screen devices (All devices with resolution from 768px to 991px), for example tablets */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .card-body {
+        height: 400px;
+    }
+}
+
+
+/* This media query works for extra small screen devices (All devices with below resolution of 767px), for example Iphones, Smart Phones */
+
+@media (max-width: 767px) {
+    #map>iframe {
+        height: 400px;
+    }
+}
+
+
+/* This default styling works for large screen devices (All devices with resolution of 1200px or above), for example laptops */
+
+.card-body {
+    height: 250px;
+}
