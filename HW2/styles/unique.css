@@ -2,36 +2,78 @@
     justify-content: space-around;
 }
 
+.card-body {
+    height: 250px;
+}
+
+.img-thumbnail {
+    height:350px;
+}
+#nav {
+    height: 70px;
+}
+
+/* Extra Large to Extra Extra*/
+@media (min-width: 1400px) and (max-width: 1800px) {
+    .card-body {
+        height: 300px;
+    }
+    .img-thumbnail {
+        height:250px;
+    }
+}
+
+/* Extra Large to Extra Extra*/
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .card-body {
+        height: 350px;
+    }
+    .img-thumbnail {
+        height:200px;
+    }
+}
+
 
 /* This media query works for medium screen devices (All devices with resolution from 992px to 1199px), for example Computers */
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .card-body {
-        height: 500px;
+        height: 200px;
+    }
+    .img-thumbnail {
+        height:350px;
     }
 }
-
 
 /* This media query works for small screen devices (All devices with resolution from 768px to 991px), for example tablets */
 
 @media (min-width: 768px) and (max-width: 991px) {
     .card-body {
-        height: 400px;
+        height: 200px;
     }
 }
 
+/* small*/
 
-/* This media query works for extra small screen devices (All devices with below resolution of 767px), for example Iphones, Smart Phones */
-
-@media (max-width: 767px) {
-    #map>iframe {
-        height: 400px;
+@media (min-width:575px) and ( max-width: 767px) {
+    .card-body {
+        height: 250px;
+    }
+    .img-thumbnail {
+        height:250px;
     }
 }
 
-
-/* This default styling works for large screen devices (All devices with resolution of 1200px or above), for example laptops */
-
-.card-body {
-    height: 250px;
+/*extra small*/
+@media (max-width: 574px) {
+    .card-body {
+        height: 320px;
+    }
+    .img-thumbnail {
+        height:250px;
+    }
+    #nav {
+        height: 220px;
+    }
 }
+

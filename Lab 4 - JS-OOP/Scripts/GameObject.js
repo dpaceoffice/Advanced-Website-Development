@@ -28,5 +28,11 @@ class GameObject {
         this.#x = x;
         this.#y = y;
     }
+    getWidth() {
+        return this.#width;
+    }
+    getHeight() {
+        return this.#height;
+    }
 }
 

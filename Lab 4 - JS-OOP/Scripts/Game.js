@@ -4,6 +4,7 @@ class Game {
     #world;
     #level;
     #scene;
+    #controller;
 
     constructor() {
         this.#isOver = false;
@@ -11,9 +12,12 @@ class Game {
         this.#level = 0;
         const levelData = this.#world.getLevel(this.#level);
         this.#scene = new Scene(levelData);
+        const player = this.#scene.getPlayer();
+        this.#controller = new Controller(player);
     }
 
     update() {
+        this.#controller.update();
         this.#scene.update()
     }
     render() {

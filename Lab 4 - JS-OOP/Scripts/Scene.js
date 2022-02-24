@@ -38,6 +38,10 @@ class Scene {
     }
 
     update() {
-        this.#player.update();
+        this.#player.update(this.#blocks);
+    }
+
+    getPlayer() {
+        return this.#player;
     }
 }
