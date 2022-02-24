@@ -15,7 +15,7 @@
 
     <body class="bg-dark text-light">
         <nav class="navbar navbar-expand-sm navbar-light bg-light container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" id="home" href="#">
                 <i class="bi bi-house"></i>
             </a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
@@ -24,22 +24,22 @@
             <div class="collapse navbar-collapse" id="navbar-options">
                 <ul class="navbar-nav center">
                     <li class="nav-item">
-                        <a class="nav-link" href="projects.html">
+                        <a class="nav-link" id="projects" href="#">
                             <i class="bi bi-code-slash"></i> Projects
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">
+                        <a class="nav-link" id="blog" href="#">
                             <i class="bi bi-chat-dots"></i> Blog
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">
+                        <a class="nav-link" id="about" href="#">
                             <i class="bi bi-person"></i> About
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">
+                        <a class="nav-link" id="contact" href="#">
                             <i class="bi bi-envelope"></i> Contact
                         </a>
                     </li>
@@ -48,6 +48,17 @@
         </nav>
         <!-- Bootstrap Bundle with Popper -->
         <script src="scripts/bootstrap.bundle.min.js"></script>
+        <script>const home = document.getElementById("home")
+                home.addEventListener("click", ()=>{window.parent.location.href = "index.html";})
+                const project = document.getElementById("projects")
+                project.addEventListener("click", ()=>{window.parent.location.href = "projects.html";})
+                const blog = document.getElementById("blog")
+                blog.addEventListener("click", ()=>{window.parent.location.href = "blog.html";})
+                const about = document.getElementById("about")
+                about.addEventListener("click", ()=>{window.parent.location.href = "about.html";})
+                const contact = document.getElementById("contact")
+                contact.addEventListener("click", ()=>{window.parent.location.href = "contact.html";})
+        </script>
     </body>
 
 </html>
