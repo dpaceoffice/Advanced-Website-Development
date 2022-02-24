@@ -2,16 +2,20 @@ class Scene {
     /* Scene Properties */
     #background;
     #blocks;
+    #monsters;
     #player;
 
     constructor(map) {
         this.#blocks = [];
+        this.#monsters = [];
         this.setScene(map);
     }
     setTile(x, y, tile) {
         switch (tile) {
             case "#": this.#blocks.push(new Block(x, y)); break;
             case "@": this.#player = new Player(x, y); break;
+            case "A": this.#monsters.push(new FloorHazard(x, y)); break;
+            case "V": this.#monsters.push(new CeilingHazard(x, y)); break;
         }
     }
     setScene(worldData) {
@@ -34,6 +38,7 @@ class Scene {
     draw() {
         this.#background.draw();
         this.#blocks.forEach(block => block.draw());
+        this.#monsters.forEach( (monster) => monster.draw() );
         this.#player.draw();
     }
 
