@@ -5,7 +5,7 @@ class GameObject {
     #width;
     #height;
     #image;
-
+    
     constructor(x, y, width, height, src) {
         this.#x = x;
         this.#y = y;
@@ -34,5 +34,8 @@ class GameObject {
     getHeight() {
         return this.#height;
     }
+    setImage(img){
+        this.#image = img;
+        }
 }
 

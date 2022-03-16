@@ -9,14 +9,84 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/bootstrap-icons.css">
     <link rel="stylesheet" href="styles/unique.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>David Pace</title>
 </head>
 
 <body class="bg-dark text-light">
-    <iframe src='navbar.html' class="w-100" style="height: 150px;"></iframe>
-    <iframe src='footer.html' class="w-100 h-100" scrolling="no"></iframe>
+    <!--Header
+    <iframe id="nav" src='navbar.html' class="w-100"></iframe>-->
+    <!--Blog page-->
+    <div class="container-fluid">
+        <h1 class="display-1 mt-4">
+            <i class="bi bi-chat-dots"></i> Blogs
+        </h1>
+        <hr>
+        <!--Carousel-->
+        <div id="blog-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+            <!-- Carousel Menu -->
+            <ol class="carousel-indicators">
+                <li data-bs-target="#blog-carousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#blog-carousel" data-bs-slide-to="1"></li>
+            </ol>
+            <!-- Carousel Body -->
+            <div class="carousel-inner text-center">
+                <!-- Slide 1 -->
+                <div id="slide-1" class="carousel-item active">
+                    <img class="carl img-fluid" src="assets/images/fortnite.jpg">
+                    <div class="carousel-caption text-black font-weight-bold">
+                        <h1 class="carl-title">Is Fornite Harming Our Children? </h1>
+                        <div>
+                            <b> How are these video games rising to stardom? </b>
+                        </div>
+                        <div>
+                            <b> Are they so addicting that they threaten the livelihood of children? </b>
+                        </div>
+                        <button class="btn btn-dark" onclick="displayArticle('IsFortniteDamagingChildren')"> Read More
+                        </button>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div id="slide-2" class="carousel-item">
+                    <img class="carl img-fluid" src="assets/images/iot.jpg">
+                    <div class="carousel-caption text-black font-weight-bold">
+                        <h1 class="carl-title text-white"> IOT Devices for Home Automation </h1>
+                        <div>
+                            <b> Google? Apple? Amazon? </b>
+                        </div>
+                        <div>
+                            <b> Which technological giant dominates the home automation industry. </b>
+                        </div>
+
+                        <button class="btn btn-dark" onclick="displayArticle('IOT_home_automation')"> Read More
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <a class="carousel-control-prev align-self-center" href="#blog-carousel" role="button" data-bs-slide="prev">
+                <i class="carousel-control-prev-icon"></i>
+            </a>
+            <a class="carousel-control-next sm" href="#blog-carousel" role="button" data-bs-slide="next">
+                <i class="carousel-control-next-icon"></i>
+            </a>
+        </div>
+    </div>
+    <!--Footer
+    <iframe src='footer.html' class="w-100 h-100" scrolling="no"></iframe>-->
     <!-- Bootstrap Bundle with Popper -->
     <script src="scripts/bootstrap.bundle.min.js"></script>
+    <script>
+        function displayArticle(article) {
+            h = $(window).height();
+            document.body.style.overflow = 'hidden';
+            document.body.innerHTML = `<div class="container-fluid"><iframe src="assets/blogs/`+article+`.pdf" frameborder="0" 
+            marginheight="0" 
+            marginwidth="0" 
+            width="100%" 
+            height="`+h+`" 
+            scrolling="auto" /></div>`
+        }
+    </script>
 </body>
 
 </html>

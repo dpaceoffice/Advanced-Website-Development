@@ -3,33 +3,71 @@
 }
 
 .card-body {
-    height: 250px;
+    height: 300px;
 }
 
 .img-thumbnail {
-    height:350px;
+    height: 250px;
 }
+
 #nav {
-    height: 70px;
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    height:60px;
+    top: 0;
+}
+#about {
+    height:900px; 
+    overflow:auto;
+}
+#projects {
+    height:1000px; 
+    overflow:auto;
+}
+#blogs {
+    height:850px; overflow:auto;
+}
+#contact {
+    height:700px; overflow:auto;
+}
+
+.carl {
+    height: 500px;
+}
+
+.carl-title {
+    font-weight: 800;
+    font-size: 100px;
 }
 
 /* Extra Large to Extra Extra*/
 @media (min-width: 1400px) and (max-width: 1800px) {
     .card-body {
-        height: 300px;
+        height: 400px;
     }
+    #projects {
+        height:950px; 
+        overflow:auto;
+    }
+
     .img-thumbnail {
-        height:250px;
+        height: 200px;
     }
 }
 
 /* Extra Large to Extra Extra*/
 @media (min-width: 1200px) and (max-width: 1399px) {
-    .card-body {
-        height: 350px;
+    #projects {
+        height:3000px; 
+        overflow:auto;
     }
+    .card-body {
+        height: 500px;
+    }
+
     .img-thumbnail {
-        height:200px;
+        height: 150px;
     }
 }
 
@@ -37,43 +75,86 @@
 /* This media query works for medium screen devices (All devices with resolution from 992px to 1199px), for example Computers */
 
 @media (min-width: 992px) and (max-width: 1199px) {
+    #projects {
+        height:2800px; 
+        overflow:auto;
+    }
     .card-body {
         height: 200px;
     }
+
     .img-thumbnail {
-        height:350px;
+        height: 350px;
+    }
+
+    .carl-title {
+        font-weight: 800;
+        font-size: 75px;
     }
 }
 
 /* This media query works for small screen devices (All devices with resolution from 768px to 991px), for example tablets */
 
 @media (min-width: 768px) and (max-width: 991px) {
+    #projects {
+        height:2500px; 
+        overflow:auto;
+    }
     .card-body {
         height: 200px;
+    }
+
+    .carl-title {
+        font-weight: 800;
+        font-size: 75px;
     }
 }
 
 /* small*/
 
-@media (min-width:575px) and ( max-width: 767px) {
+@media (min-width:575px) and (max-width: 767px) {
+    #projects {
+        height:2900px; 
+        overflow:auto;
+    }
     .card-body {
         height: 250px;
     }
+
     .img-thumbnail {
-        height:250px;
+        height: 250px;
+    }
+
+    .carl-title {
+        font-weight: 800;
+        font-size: 50px;
+    }
+
+    .carl {
+        height: 350px;
     }
 }
 
 /*extra small*/
 @media (max-width: 574px) {
+    #projects {
+        height:3200px; 
+        overflow:auto;
+    }
     .card-body {
         height: 320px;
     }
+
     .img-thumbnail {
-        height:250px;
+        height: 250px;
     }
-    #nav {
-        height: 220px;
+
+    .carl-title {
+        font-weight: 800;
+        font-size: 45px;
+    }
+
+    .carl {
+        height: 350px;
     }
 }
-

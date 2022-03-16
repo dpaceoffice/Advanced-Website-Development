@@ -2,11 +2,14 @@ class Player extends GameObject {
     /* Player Properties */
     #physics;
     #isJumping;
+    #currentPose;
 
     constructor(x, y) {
         super(x * Block.SIZE, y * Block.SIZE, Block.SIZE, Block.SIZE, "Assets/link-down.png");
-        this.#physics = new Physics(4);
+        this.#physics = new Physics(3);
         this.#isJumping = false;
+        this.#currentPose = Pose.RIGHT; //ANIMATION POSES
+        super.setImage(this.#currentPose.getImage());
     }
 
     move() {
@@ -28,11 +31,17 @@ class Player extends GameObject {
     }
     moveLeft() {
         this.#physics.moveLeft();
+        this.#currentPose = Pose.LEFT;
     }
     moveRight() {
         this.#physics.moveRight();
+        this.#currentPose = Pose.RIGHT;
     }
     isJumping(isJumping) {
         this.#isJumping = isJumping;
+    }
+    draw() {
+        super.setImage(this.#currentPose.getImage());
+        super.draw();
     }
 }

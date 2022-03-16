@@ -18,10 +18,28 @@ class Game {
 
     update() {
         this.#controller.update();
-        this.#scene.update()
+        this.#scene.update();
+        if (this.#scene.getExit().isTouching(this.#scene.getPlayer())) {
+            this.#level++;
+            if (this.#level < this.#world.getLength()) {
+                this.loadScene();
+            }
+            else {
+                this.#isOver = true;
+            }
+        }
+        if (this.#scene.hasCollisions()) {
+            this.loadScene()
+        }
     }
     render() {
         this.#scene.draw();
+    }
+
+    loadScene() {
+        const map = this.#world.getLevel(this.#level);
+        this.#scene = new Scene(map);
+        this.#controller = new Controller(this.#scene.getPlayer());
     }
 
     /* The main game loop (static method) */

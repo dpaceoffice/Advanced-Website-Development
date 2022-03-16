@@ -49,13 +49,25 @@
         <!-- Bootstrap Bundle with Popper -->
         <script src="scripts/bootstrap.bundle.min.js"></script>
         <script>
+            function getScrollParent(node) {
+                if (node == null) {
+                    return null;
+                }
+
+                if (node.scrollHeight > node.clientHeight) {
+                    return node;
+                } else {
+                    return getScrollParent(node.parentNode);
+                }
+            }
             const home = document.getElementById("home")
             home.addEventListener("click", () => {
                 window.parent.location.href = "index.html";
             })
             const project = document.getElementById("projects")
             project.addEventListener("click", () => {
-                window.parent.location.href = "projects.html";
+                getScrollParent(document).getElementById('youridhere').scrollIntoView();
+                //window.parent.location.href = "projects.html";
             })
             const blog = document.getElementById("blog")
             blog.addEventListener("click", () => {

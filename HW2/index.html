@@ -9,21 +9,89 @@
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/bootstrap-icons.css">
     <link rel="stylesheet" href="styles/unique.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>David Pace</title>
 </head>
 
-<body class="bg-dark text-light">
-    <iframe id="nav" src='navbar.html' class="w-100"></iframe>
-    <div class="d-flex text-center justify-content-center">
-        <div class="flex-column">
-            <h1 class="pb-2">Who Am I?</h1>
-            <hr>
-            <img src="images/profile-image.png" />
-            <h5 class="p-2 w-75 container-sm">My name is David Pace! I pride myself in being an enthusiastic and versatile Software Developer with over a decade of experience in programming back and front end for applications and websites. Self-directed leader with expertise in relational
-                databases, programmer languages and product engagement.</h5>
-        </div>
+<body id="ParentContainer" class="bg-dark text-light">
+    <div id="nav">
+
+        <body class="bg-dark text-light">
+            <nav class="navbar navbar-expand-sm navbar-light bg-light container-fluid">
+                <a class="navbar-brand" id="home" href="#">
+                    <i class="bi bi-house"></i>
+                </a>
+                <button id="navbar-toggler" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-options">
+                    <i class="navbar-toggler-icon"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-options">
+                    <ul class="navbar-nav center">
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-about" href="#">
+                                <i class="bi bi-person"></i> About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-projects" href="#">
+                                <i class="bi bi-code-slash"></i> Projects
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-blog" href="#">
+                                <i class="bi bi-chat-dots"></i> Blog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="nav-contact" href="#">
+                                <i class="bi bi-envelope"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
     </div>
-    <iframe src='footer.html' class="w-100 h-100" scrolling="no"></iframe>
+    <iframe id="about" src='about.html' class="mt-5 w-100"></iframe>
+    <iframe id="projects" src='projects.html' class="w-100"></iframe>
+    <iframe id="blogs" src='blog.html' class="w-100"></iframe>
+    <iframe id="contact" src='contact.html' class="w-100"></iframe>
+    <iframe src='footer.html' class="w-100" scrolling="no"></iframe>
+    <script>
+
+        function toggle() {
+            const menuToggle = document.getElementById('navbar-toggler');
+            if($(window).width() < 574) {
+                menuToggle.click()
+            }
+        }
+        function handleClick(offset) {
+            window.scrollTo($('html, body').animate({ scrollTop: offset - 60 }, 1000));
+            toggle();
+        }
+        const home = document.getElementById("home")
+        home.addEventListener("click", () => {
+            window.parent.location.href = "index.html";
+        })
+        const project = document.getElementById("nav-projects")
+        project.addEventListener("click", () => {
+            let item = document.getElementById('projects')// what we want to scroll to
+            handleClick(item.offsetTop);
+        })
+        const blog = document.getElementById("nav-blog")
+        blog.addEventListener("click", () => {
+            let item = document.getElementById('blogs')// what we want to scroll to
+            handleClick(item.offsetTop);
+        })
+        const about = document.getElementById("nav-about")
+        about.addEventListener("click", () => {
+            let item = document.getElementById('about')// what we want to scroll to
+            handleClick(item.offsetTop);
+        })
+        const contact = document.getElementById("nav-contact")
+        contact.addEventListener("click", () => {
+            let item = document.getElementById('contact')// what we want to scroll to
+            handleClick(item.offsetTop);
+        })
+    </script>
     <!-- Bootstrap Bundle with Popper -->
     <script src="scripts/bootstrap.bundle.min.js"></script>
 </body>

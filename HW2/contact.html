@@ -13,8 +13,34 @@
 </head>
 
 <body class="bg-dark text-light">
-    <iframe src='navbar.html' class="w-100" style="height: 150px;"></iframe>
-    <iframe src='footer.html' class="w-100 h-100" scrolling="no"></iframe>
+    <!--<iframe id='nav' src='navbar.html' class="w-100"></iframe>-->
+    <!--Contact Form-->
+    <div class="container mt-4">
+        <h1 class="display-1">
+            <i class="bi bi-envelope"></i> Contact
+        </h1>
+        <hr>
+        <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/14lh6MIQOy9j3jWzEl7BysxEe4p9OoU9WN3tytbQjj1I/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+            <div class="form-group mb-3">
+                <label>Name:</label>
+                <input class="form-control" type="text" id="name" placeholder="Name">
+            </div>
+            <div class="form-group mb-3">
+                <label>Email:</label>
+                <input class="form-control" type="email" id="email" placeholder="Email">
+            </div>
+            <div class="form-group mb-3">
+                <label>Subject:</label>
+                <input class="form-control" type="subject" id="subject" placeholder="Subject">
+            </div>
+            <div class="form-group mb-3">
+                <label>Message:</label>
+                <textarea class="form-control" rows="4" id="message" placeholder="Message"> </textarea>
+            </div>
+            <button class='btn btn-primary float-end' type="submit"> Submit </button>
+        </form>
+    </div>
+    <!--<iframe src='footer.html' class="w-100 h-100" scrolling="no"></iframe>-->
     <!-- Bootstrap Bundle with Popper -->
     <script src="scripts/bootstrap.bundle.min.js"></script>
 </body>

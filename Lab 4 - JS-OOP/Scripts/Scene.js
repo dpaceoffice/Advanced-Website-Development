@@ -4,6 +4,7 @@ class Scene {
     #blocks;
     #monsters;
     #player;
+    #exit;
 
     constructor(map) {
         this.#blocks = [];
@@ -16,6 +17,7 @@ class Scene {
             case "@": this.#player = new Player(x, y); break;
             case "A": this.#monsters.push(new FloorHazard(x, y)); break;
             case "V": this.#monsters.push(new CeilingHazard(x, y)); break;
+            case "!": this.#exit = new Exit(x, y); break;
         }
     }
     setScene(worldData) {
@@ -35,11 +37,24 @@ class Scene {
         this.#background = new GameObject(0, 0, width, height, img);
     }
 
+    hasCollisions() {
+        return this.#monsters.some(monster => monster.isTouching(this.#player));
+    }
+
+    getCollisions() {
+        return this.#monsters.filter(monster => monster.isTouching(this.#player))
+    }
+
     draw() {
         this.#background.draw();
         this.#blocks.forEach(block => block.draw());
-        this.#monsters.forEach( (monster) => monster.draw() );
+        this.#monsters.forEach((monster) => monster.draw());
+        this.#exit.draw();
         this.#player.draw();
+    }
+
+    getExit() {
+        return this.#exit;
     }
 
     update() {
