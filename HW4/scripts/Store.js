@@ -137,7 +137,7 @@ class Store {
   }
 }
 
-const store = new Store(); //Create an instance of store, temporary until persistant data is configured.
+const store = new Store(); //Create an instance of store, store componenet objects are temporarily, statically declared until persistant data is configured.
 /**
  * Renders category given the category's id
  * @param {int} category_id
