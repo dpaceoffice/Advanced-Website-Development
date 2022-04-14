@@ -12,8 +12,9 @@ function localhostHandler(request, response, next) {
 app.use(bodyParser.json()); //use body parser to read json
 app.use(bodyParser.urlencoded({ extended: false })); //use body parser to read url
 
+const routes = require("./routes/game.routes"); //export router as module
+app.use("/api/game", routes); //app use routes on path: /api/game
+
 app.listen(port); //app listen on port
 console.log(`Server is running on port ${port}...`); //print message to console
 
-const routes = require("./routes/game.routes"); //export router as module
-app.use("/api/game", routes); //app use routes on path: /api/game
