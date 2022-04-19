@@ -13,6 +13,9 @@
         "shortid": "*",
         "express-session": "*",
         "passport": "*",
-        "passport-local": "*"
+        "passport-local": "*",
+        "express-flash": "*",
+        "bcrypt": "*",
+        "dotenv": "*"
     }
 }
